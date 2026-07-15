@@ -10,7 +10,7 @@
 
 ## 当前阶段
 
-当前处于设计与项目初始化阶段。本阶段包括项目规则、架构边界和完整产品设计；暂不包含新版 Skill、扫描脚本或自动发布功能。
+当前处于 V2 开发与评测阶段。V1 已作为不可变快照保存；V2 已建立主 Skill、规则模块和基础扫描器，尚未完成新旧版本对比评测与正式公开发布。
 
 ## 核心流程
 
@@ -23,15 +23,20 @@
 
 ## 如何使用
 
-当前没有可执行程序。设计文件位于：
+## 双版本入口
+
+- [V1 经典基础版](versions/v1/README.md)：紧凑的七项发布前检查。
+- [V2 通用 Agent 版](versions/v2/README.md)：工程与合规并重的主动检查。
+
+设计文件位于：
 
 `docs/superpowers/specs/2026-07-15-release-guardian-v2-design.md`
 
 ## 如何验证当前阶段
 
-- 确认根目录五份项目启动文件齐全。
-- 阅读设计文档，确认没有占位内容或未决产品要求。
-- 后续实施应先制定文件级计划，再分阶段开发和测试。
+- 运行 `cd versions/v1 && shasum -a 256 -c SHA256`，确认 V1 输出 `SKILL.md: OK`。
+- 运行 `python3 -m unittest discover -s tests -v`。
+- 运行 `python3 versions/v2/scripts/release_scan.py versions/v2`。
 
 ## 重要边界
 

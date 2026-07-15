@@ -2,19 +2,19 @@
 
 ## Doing
 
-- 复核 Release Guardian v2 文件级实施计划。
+- 建立并评测 Release Guardian V2。
 
 ## To Do
 
-- 保存原版 Skill 快照并建立第一轮测试样本。
-- 重构主 `SKILL.md` 的识别、路由和汇总流程。
-- 编写工程、发布、安全、合规、知识产权和运维规则模块。
-- 增加无第三方依赖的可选扫描脚本。
 - 运行新旧版本对比测试并修正误报。
 - 使用新版 Release Guardian 对仓库自身执行发布前复核。
 
 ## Done
 
+- 永久保存并校验 Release Guardian V1 原版快照。
+- 建立 Release Guardian V2 主 Skill 和八个规则模块。
+- 建立无第三方依赖的基础扫描器和单元测试。
+- 建立第一轮六类 Agent 行为评测样本。
 - 完成并确认 Release Guardian v2 设计文档。
 - 制定包含 V1 永久保留与双版本发布的实施计划。
 - 明确通用型、面向初级开发者的产品定位。
