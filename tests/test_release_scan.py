@@ -56,6 +56,13 @@ class ReleaseScanTests(unittest.TestCase):
         self.assertEqual(result["findings"][0]["rule_id"], "RG-PRIV-002")
         self.assertEqual(result["findings"][0]["severity"], "warning")
 
+    def test_path_regex_definition_is_not_treated_as_a_local_path(self):
+        result = self.scan_files(
+            {"scanner.py": 'pattern = re.compile(r"/Users/[^/\\s]+/")\n'}
+        )
+
+        self.assertEqual(result["summary"]["warnings"], 0)
+
 
 if __name__ == "__main__":
     unittest.main()
