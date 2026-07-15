@@ -28,6 +28,13 @@
 - [V1 经典基础版](versions/v1/README.md)：紧凑的七项发布前检查。
 - [V2 通用 Agent 版](versions/v2/README.md)：工程与合规并重的主动检查。
 
+两个版本位于同一个仓库，但都是独立 Skill：
+
+- V1 的安装目录名和 Skill 名为 `release-guardian`。
+- V2 的安装目录名和 Skill 名为 `release-guardian-v2`。
+- GitHub Release 分别提供两个目录的压缩包；用户可以任选其一，也可以同时安装。
+- 不使用不同分支保存版本，避免用户难以发现和比较。
+
 设计文件位于：
 
 `docs/superpowers/specs/2026-07-15-release-guardian-v2-design.md`

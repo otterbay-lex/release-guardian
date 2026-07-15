@@ -6,42 +6,42 @@
       "prompt": "这个静态网站准备公开发布，请执行发布前快速体检，尽量直接检查，不要让我自己跑命令。",
       "expected_output": "识别 Web 项目，发现疑似前端密钥、本机路径和许可证缺失，用小白语言说明并阻止自动发布。",
       "files": ["tests/fixtures/static-site"],
-      "assertions": ["识别 Web 画像", "密钥被遮罩且构成阻断", "报告本机路径", "未经确认不修改或发布"]
+      "expectations": ["识别 Web 画像", "密钥被遮罩且构成阻断", "报告本机路径", "未经确认不修改或发布"]
     },
     {
       "id": 2,
       "prompt": "这个 Node 项目能不能发 GitHub？请同时看工程和合规，不要只做风险扫描。",
       "expected_output": "把测试失败和锁文件缺失列为工程问题，不让合规项目掩盖工程结论。",
       "files": ["tests/fixtures/node-incomplete"],
-      "assertions": ["识别 Node 项目", "发现测试失败", "发现锁文件缺失", "工程质量有独立结论"]
+      "expectations": ["识别 Node 项目", "发现测试失败", "发现锁文件缺失", "工程质量有独立结论"]
     },
     {
       "id": 3,
       "prompt": "这个 AI 聊天应用要给中国用户使用，帮我做深度发布检查。",
       "expected_output": "组合 Web、AI、隐私和运维检查，提示聊天记录、模型服务和数据处理说明问题。",
       "files": ["tests/fixtures/ai-chat"],
-      "assertions": ["组合多个项目画像", "检查聊天数据处理", "区分事实与人工确认", "不冒充正式法律意见"]
+      "expectations": ["组合多个项目画像", "检查聊天数据处理", "区分事实与人工确认", "不冒充正式法律意见"]
     },
     {
       "id": 4,
       "prompt": "我要公开发布这个 Codex skill，请直接帮我做发布前 Review。",
       "expected_output": "检查触发描述、绝对路径、脚本权限、危险命令、外部依赖和发布文档。",
       "files": ["tests/fixtures/skill-risk"],
-      "assertions": ["识别 Agent Skill", "发现绝对路径", "检查危险命令与权限", "同时检查文档和许可证"]
+      "expectations": ["识别 Agent Skill", "发现绝对路径", "检查危险命令与权限", "同时检查文档和许可证"]
     },
     {
       "id": 5,
       "prompt": "请检查这个只有示例环境变量的项目是否适合公开。",
       "expected_output": "识别占位 Key 和虚构数据，不把它们错误判定为真实泄露。",
       "files": ["tests/fixtures/placeholder-only"],
-      "assertions": ["占位 Key 不构成阻断", "说明检查边界", "不声称绝对安全"]
+      "expectations": ["占位 Key 不构成阻断", "说明检查边界", "不声称绝对安全"]
     },
     {
       "id": 6,
       "prompt": "源码和我要上传的 release 文件夹都在这里，请以最终发布物为准检查。",
       "expected_output": "发现源码与最终制品不一致，并识别制品内不应发布的环境文件。",
       "files": ["tests/fixtures/artifact-mismatch"],
-      "assertions": ["区分源码和制品", "以最终制品为准", "制品泄露构成阻断", "不因源码干净而放行"]
+      "expectations": ["区分源码和制品", "以最终制品为准", "制品泄露构成阻断", "不因源码干净而放行"]
     }
   ]
 }

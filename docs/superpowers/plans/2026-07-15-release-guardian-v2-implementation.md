@@ -57,7 +57,7 @@ Run:
 
 ```bash
 mkdir -p versions/v1
-cp /Users/hazel1996/.codex/skills/release-guardian/SKILL.md versions/v1/SKILL.md
+cp <installed-skill-path>/release-guardian/SKILL.md versions/v1/SKILL.md
 ```
 
 Expected: `versions/v1/SKILL.md` 存在且内容完整。
@@ -107,7 +107,7 @@ git commit -m "chore: preserve release guardian v1"
 
 ```python
 self.assertEqual(result["summary"]["blockers"], 0)
-self.assertNotIn("sk-proj-1234567890abcdefghijklmnop", json.dumps(result))
+self.assertNotIn(raw_key, json.dumps(result))
 self.assertEqual(result["findings"][0]["rule_id"], "RG-SEC-001")
 self.assertEqual(result["findings"][0]["severity"], "blocker")
 self.assertEqual(result["findings"][0]["rule_id"], "RG-PRIV-002")

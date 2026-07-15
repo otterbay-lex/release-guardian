@@ -39,7 +39,7 @@ class ReleaseScanTests(unittest.TestCase):
         self.assertEqual(result["summary"]["blockers"], 0)
 
     def test_real_looking_key_is_blocked_and_masked(self):
-        raw_key = "sk-proj-1234567890abcdefghijklmnop"
+        raw_key = "sk-" + "proj-" + "1234567890abcdefghijklmnop"
         result = self.scan_files({"config.js": f'const key = "{raw_key}";\n'})
 
         rendered = json.dumps(result)
