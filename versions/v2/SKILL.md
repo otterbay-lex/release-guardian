@@ -80,4 +80,3 @@ After all repairs and fresh verification, state the actual artifact/path/branch/
 Do not ask users to run commands or interpret technical output when the Agent can do so safely. Investigate first, infer conservatively, and ask only when an answer materially changes scope or requires authority unavailable from the workspace.
 
 Multi-Agent review is optional. When available and appropriate, engineering, security, compliance, and IP checks may run independently; the primary Agent must reconcile duplicates and conflicts. A single Agent must still be able to complete the whole workflow.
-
